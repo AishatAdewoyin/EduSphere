@@ -66,7 +66,7 @@ const Navbar = () => {
           <a href="../pages/about.jsx" className="p-4 border-b border-gray-600">About</a>
         </li>
         <li>
-          <a href="../pages/contact.jsx" className="p-4 border-b border-gray-600">Contact</a>
+          <a href="../pages/contact.jsx" className="p-4">Contact</a>
         </li>
       </ul>
     </div>

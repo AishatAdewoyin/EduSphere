@@ -1,5 +1,5 @@
 import React from 'react';
-import Analytics from './components/Analytics';
+import Developer from './components/Developer'
 import Cards from './components/Cards';
 import Footer from './components/Footer';
 import Hero from './components/Hero';
@@ -11,9 +11,9 @@ function App() {
     <div>
       <Navbar />
       <Hero />
-      <Analytics />
-      <Newsletter />
       <Cards />
+      <Developer />
+      <Newsletter />
       <Footer />
     </div>
   );
