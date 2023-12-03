@@ -103,7 +103,7 @@ function login() {
                 <div className="text-center">
                   <Link
                     className="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
-                    href="#"
+                    to="#"
                   >
                     Forgot Password?
                   </Link>
@@ -111,7 +111,7 @@ function login() {
                 <div className="text-center">
                   <Link
                     className="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
-                    href="#"
+                    to="#"
                   >
                     Already have an account? Login!
                   </Link>
