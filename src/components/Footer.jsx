@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import {
   FaYoutubeSquare,
   FaFacebookSquare,
@@ -6,6 +7,7 @@ import {
   FaInstagram,
   FaTwitterSquare,
 } from "react-icons/fa";
+
 
 const Footer = () => {
   return (
@@ -17,21 +19,21 @@ const Footer = () => {
           like our page, follow us and share our content with your loved ones!
         </p>
         <div className="flex justify-between md:w-[75%] my-6">
-          <a href="https://www.facebook.com/aishatomoadewoyin" target="_blank">
+          <Link href="https://www.facebook.com/aishatomoadewoyin" target="_blank">
             <FaFacebookSquare size={30} />
-          </a>
-          <a href="https://www.instagram.com/aishat_adewoyin" target="_blank">
+          </Link>
+          <Link href="https://www.instagram.com/aishat_adewoyin" target="_blank">
             <FaInstagram size={30} />
-          </a>
-          <a href="https://twitter.com/aishaadewoyin" target="_blank">
+          </Link>
+          <Link href="https://twitter.com/aishaadewoyin" target="_blank">
             <FaTwitterSquare size={30} />
-          </a>
-          <a href="https://github.com/Aishat452" target="_blank">
+          </Link>
+          <Link href="https://github.com/Aishat452" target="_blank">
             <FaGithubSquare size={30} />
-          </a>
-          <a href="https://www.youtube.com/c/DigitalIntellectualHub"target="_blank">
+          </Link>
+          <Link href="https://www.youtube.com/c/DigitalIntellectualHub"target="_blank">
             <FaYoutubeSquare size={30} />
-          </a>
+          </Link>
         </div>
       </div>
       <div className="lg:col-span-2 flex justify-between mt-6">

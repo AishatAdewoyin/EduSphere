@@ -21,22 +21,22 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link to="/careers" className="p-4">
+          <Link to="/Careers" className="p-4">
             Careers
           </Link>
         </li>
         <li>
-          <Link to="/login" className="p-4">
+          <Link to="/Login" className="p-4">
             Profile
           </Link>
         </li>
         <li>
-          <Link to="/about" className="p-4">
+          <Link to="/About" className="p-4">
             About
           </Link>
         </li>
         <li>
-          <Link to="/contact" className="p-4">
+          <Link to="/Contact" className="p-4">
             Contact
           </Link>
         </li>
@@ -60,22 +60,22 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
-          <Link to="/careers" className="p-4 border-b border-gray-600">
+          <Link to="/Careers" className="p-4 border-b border-gray-600">
             Career
           </Link>
         </li>
         <li>
-          <Link to="/login" className="p-4 border-b border-gray-600">
+          <Link to="/Login" className="p-4 border-b border-gray-600">
             Profile
           </Link>
         </li>
         <li>
-          <Link to="/about" className="p-4 border-b border-gray-600">
+          <Link to="/About" className="p-4 border-b border-gray-600">
             About
           </Link>
         </li>
         <li>
-          <Link to="/contact" className="p-4">
+          <Link to="/Contact" className="p-4">
             Contact
           </Link>
         </li>

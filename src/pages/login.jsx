@@ -1,8 +1,9 @@
 import React from "react";
+import { Link } from 'react-router-dom'
 
 function login() {
   return (
-    <div>
+    <div className="font-mono bg-gray-400">
       <div className="container mx-auto">
         <div className="flex justify-center px-6 my-12">
           <div className="w-full xl:w-3/4 lg:w-11/12 flex">
@@ -100,20 +101,20 @@ function login() {
                 </div>
                 <hr className="mb-6 border-t" />
                 <div className="text-center">
-                  <a
+                  <Link
                     className="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
                     href="#"
                   >
                     Forgot Password?
-                  </a>
+                  </Link>
                 </div>
                 <div className="text-center">
-                  <a
+                  <Link
                     className="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
                     href="#"
                   >
                     Already have an account? Login!
-                  </a>
+                  </Link>
                 </div>
               </form>
             </div>
