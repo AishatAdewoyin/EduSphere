@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -10,34 +11,34 @@ const Navbar = () => {
 
   return (
     <div className="flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-white w-full">
-      <a href="#">
+      <Link to="/">
         <h1 className="text-3xl font-bold text-[#00df9a]">EduSphere</h1>
-      </a>
+      </Link>
       <ul className="hidden md:flex">
         <li>
-          <a href="#" className="p-4">
+          <Link to="/" className="p-4">
             Home
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="../pages/careers.jsx" className="p-4">
+          <Link to="/careers" className="p-4">
             Careers
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="../pages/login.jsx" className="p-4">
+          <Link to="/login" className="p-4">
             Profile
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="../pages/about.jsx" className="p-4">
+          <Link to="/about" className="p-4">
             About
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="../pages/contact.jsx" className="p-4">
+          <Link to="/contact" className="p-4">
             Contact
-          </a>
+          </Link>
         </li>
       </ul>
       <div onClick={handleNav} className="block md:hidden">
@@ -54,19 +55,29 @@ const Navbar = () => {
           EduSphere
         </h1>
         <li>
-          <a href="#" className="p-4 border-b border-gray-600">Home</a>
+          <Link to="/" className="p-4 border-b border-gray-600">
+            Home
+          </Link>
         </li>
         <li>
-          <a href="../pages/careers.jsx" className="p-4 border-b border-gray-600">Career</a>
+          <Link to="/careers" className="p-4 border-b border-gray-600">
+            Career
+          </Link>
         </li>
         <li>
-          <a href="../pages/login.jsx" className="p-4 border-b border-gray-600">Profile</a>
+          <Link to="/login" className="p-4 border-b border-gray-600">
+            Profile
+          </Link>
         </li>
         <li>
-          <a href="../pages/about.jsx" className="p-4 border-b border-gray-600">About</a>
+          <Link to="/about" className="p-4 border-b border-gray-600">
+            About
+          </Link>
         </li>
         <li>
-          <a href="../pages/contact.jsx" className="p-4">Contact</a>
+          <Link to="/contact" className="p-4">
+            Contact
+          </Link>
         </li>
       </ul>
     </div>
