@@ -1,7 +1,7 @@
 import React from 'react';
 import Aishat from '../assets/aishat_adewoyin.png';
 // import { Link } from "react-router-dom"; 
-import Link from 'next/link';
+// import Link from 'next/link';
 
 const Developer = () => {
   return (
@@ -14,7 +14,7 @@ const Developer = () => {
           <p className='text-gray-400'>
           A passionate software developer with an unwavering commitment to crafting visually stunning and user-friendly websites. Dedicated to blending cutting-edge technology with a keen eye for design, I bring creativity and precision to every project, ensuring an exceptional user experience and aesthetic appeal that captivates and engages visitors.
           </p>
-          <Link href="https://www.linkedin.com/in/aishatadewoyin/" target='_blank'><button className='bg-[#00df9a] text-black w-[300px] rounded-md font-medium my-6 mx-auto md:mx-0 py-3'>Connect With me on LinkedIn</button></Link>
+          <a href="https://www.linkedin.com/in/aishatadewoyin/" target='_blank'><button className='bg-[#00df9a] text-black w-[300px] rounded-md font-medium my-6 mx-auto md:mx-0 py-3'>Connect With me on LinkedIn</button></a>
         </div>
       </div>
     </div>
