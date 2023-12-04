@@ -1,7 +1,7 @@
 import React from 'react';
 import Aishat from '../assets/aishat_adewoyin.png';
-import { Link } from "react-router-dom"; 
-
+// import { Link } from "react-router-dom"; 
+import Link from 'next/link';
 
 const Developer = () => {
   return (

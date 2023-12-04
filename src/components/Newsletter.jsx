@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-
+// import { Link } from 'react-router-dom';
+import Link from 'next/link';
 
 const Newsletter = () => {
   return (
@@ -19,13 +19,13 @@ const Newsletter = () => {
               type='email'
               placeholder='Enter Email'
             />
-            <Link><button className='bg-[#00df9a] text-black rounded-md font-medium w-[150px] ml-4 my-6 px-6 py-3'>
+            <Link href="/"><button className='bg-[#00df9a] text-black rounded-md font-medium w-[150px] ml-4 my-6 px-6 py-3'>
               Join Us
             </button></Link>
           </div>
           <p>
             We protect your data. Read our{' '}
-            <span className='text-red-600'><Link>Privacy Policy.</Link></span>
+            <span className='text-red-600'><Link href="/">Privacy Policy.</Link></span>
           </p>
         </div>
       </div>
