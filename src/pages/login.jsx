@@ -1,16 +1,13 @@
 import React from "react";
-import { Link } from 'react-router-dom'
+import Link from "next/link";
 
 function login() {
   return (
     <div className="font-mono bg-gray-400">
       <div className="container mx-auto">
         <div className="flex justify-center px-6 my-12">
-          <div className="w-full xl:w-3/4 lg:w-11/12 flex">
-            <div
-              className="w-full h-auto bg-gray-400 hidden lg:block lg:w-5/12 bg-cover rounded-l-lg"
-              style="background-image: url('https://source.unsplash.com/Mv9hjnEUHR4/600x800')"
-            ></div>
+          <div className="w-full xl:w-3/4 lg:w-11/12 flex bg-[#00df9a]">
+            <div className="w-full h-auto bg-gray-400 hidden lg:block lg:w-5/12 bg-cover rounded-l-lg"></div>
             <div className="w-full lg:w-7/12 bg-white p-5 rounded-lg lg:rounded-l-none">
               <h3 className="pt-4 text-2xl text-center">Create an Account!</h3>
               <form className="px-8 pt-6 pb-8 mb-4 bg-white rounded">
@@ -101,19 +98,13 @@ function login() {
                 </div>
                 <hr className="mb-6 border-t" />
                 <div className="text-center">
-                  <Link
-                    className="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
-                    to="#"
-                  >
-                    Forgot Password?
+                  <Link href="#" className="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800">
+                      Forgot Password?
                   </Link>
                 </div>
                 <div className="text-center">
-                  <Link
-                    className="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
-                    to="#"
-                  >
-                    Already have an account? Login!
+                  <Link href="#" className="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800">
+                      Already have an account? Login!
                   </Link>
                 </div>
               </form>
