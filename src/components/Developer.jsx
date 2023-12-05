@@ -1,5 +1,6 @@
 import React from 'react';
-import Aishat from '../assets/aishat_adewoyin.png';
+import Aishat from '../images/aishat_adewoyin.png';
+import Image from 'next/image';
 // import { Link } from "react-router-dom"; 
 // import Link from 'next/link';
 
@@ -7,7 +8,11 @@ const Developer = () => {
   return (
     <div className='w-full py-16 px-4 text-white'>
       <div className='max-w-[1240px] mx-auto grid md:grid-cols-2'>
-        <img className='w-[500px] mx-auto rounded-full my-4' src={Aishat} alt='/' />
+        <Image 
+        src={Aishat}
+        className='w-[500px] mx-auto rounded-full my-4' alt='/'
+        />
+        {/* <img   /> */}
         <div className='flex flex-col justify-center'>
           <p className='text-red-400 font-bold '>GET TO KNOW THE DEVELOPER</p>
           <h1 className='md:text-4xl sm:text-3xl text-2xl font-bold py-2'>Meet Aishat Adewoyin</h1>

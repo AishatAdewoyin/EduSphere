@@ -1,7 +1,8 @@
 import React from "react";
-import Single from "../assets/single.png";
-import Double from "../assets/double.png";
-import Triple from "../assets/triple.png";
+import Image from "next/image";
+import Single from "../images/single.png";
+import Double from "../images/double.png";
+import Triple from "../images/triple.png";
 
 const Cards = () => {
   return (
@@ -11,7 +12,7 @@ const Cards = () => {
       </h1>
       <div className="max-w-[1240px] mx-auto grid md:grid-cols-3 py-[5rem] gap-8">
         <div className="w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300">
-          <img
+          <Image
             className="w-20 mx-auto mt-[-3rem] bg-white"
             src={Triple}
             alt="/"
@@ -31,7 +32,7 @@ const Cards = () => {
           </button>
         </div>
         <div className="w-full shadow-xl bg-gray-100 flex flex-col p-4 md:my-0 my-8 rounded-lg hover:scale-105 duration-300">
-          <img
+          <Image
             className="w-20 mx-auto mt-[-3rem] bg-transparent"
             src={Double}
             alt="/"
@@ -47,7 +48,7 @@ const Cards = () => {
           </button>
         </div>
         <div className="w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300">
-          <img
+          <Image
             className="w-20 mx-auto mt-[-3rem] bg-white"
              src={Single}
             alt="/"
