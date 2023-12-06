@@ -41,16 +41,16 @@ const Footer = () => {
           <h6 className="font-medium text-gray-400">Solutions</h6>
           <ul>
             <li className="py-2 text-sm">
-              <Link href="/analytics">Analytics</Link>
+              <Link href="/">Analytics</Link>
             </li>
             <li className="py-2 text-sm">
-              <Link href="/marketing">Marketing</Link>
+              <Link href="/">Marketing</Link>
             </li>
             <li className="py-2 text-sm">
-              <Link href="/commerce">Commerce</Link>
+              <Link href="/">Commerce</Link>
             </li>
             <li className="py-2 text-sm">
-              <Link href="/insights">Insights</Link>
+              <Link href="/">Insights</Link>
             </li>
           </ul>
         </div>
@@ -58,16 +58,16 @@ const Footer = () => {
           <h6 className="font-medium text-gray-400">Support</h6>
           <ul>
             <li className="py-2 text-sm">
-              <Link href="/pricing">Pricing</Link>
+              <Link href="/">Pricing</Link>
             </li>
             <li className="py-2 text-sm">
-              <Link href="/documentation">Documentation</Link>
+              <Link href="/">Documentation</Link>
             </li>
             <li className="py-2 text-sm">
-              <Link href="/guides">Guides</Link>
+              <Link href="/">Guides</Link>
             </li>
             <li className="py-2 text-sm">
-              <Link href="/api-status">API Status</Link>
+              <Link href="/">API Status</Link>
             </li>
           </ul>
         </div>
@@ -75,16 +75,16 @@ const Footer = () => {
           <h6 className="font-medium text-gray-400">Company</h6>
           <ul>
             <li className="py-2 text-sm">
-              <Link href="/about">About</Link>
+              <Link href="/About">About</Link>
             </li>
             <li className="py-2 text-sm">
-              <Link href="/blog">Blog</Link>
+              <Link href="/">Blog</Link>
             </li>
             <li className="py-2 text-sm">
-              <Link href="/jobs">Jobs</Link>
+              <Link href="/Careers">Career</Link>
             </li>
             <li className="py-2 text-sm">
-              <Link href="/press">Press</Link>
+              <Link href="/">News</Link>
             </li>
           </ul>
         </div>
