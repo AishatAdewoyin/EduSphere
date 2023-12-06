@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import Typed from 'typed.js';
+import Link from "next/link";
 
 const Hero = () => {
   const typedRef = useRef(null);
@@ -36,7 +37,7 @@ const Hero = () => {
           <span ref={typedRef} className='md:text-4xl sm:text-4xl md:pl-4 text-red-400 pl-2' />
         </div>
         <p className='md:text-l text-l text-gray-600'>The dynamic social media platform designed exclusively for students and administrators of our school. eduSphere is more than just a virtual space; it's a vibrant community where knowledge meets collaboration, and connections flourish.</p>
-        <a href='../pages/signup.jsx'><button className='bg-[#00df9a] w-[300px] rounded-md font-bold my-6 mx-auto py-3 text-black'>Join Us</button></a>
+        <Link href='/Signup'><button className='bg-[#00df9a] w-[300px] rounded-md font-bold my-6 mx-auto py-3 text-black'>Join Us</button></Link>
       </div>
     </div>
   );
