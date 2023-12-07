@@ -86,12 +86,14 @@ function Signup() {
                   </div>
                 </div>
                 <div className="mb-6 text-center">
+                  <Link href="/Profile">
                   <button
                     className="w-full px-4 py-2 font-bold text-black bg-[#00df9a] rounded-full hover:bg-[#47ffc5] focus:outline-none focus:shadow-outline"
                     type="button"
                   >
                     Register Account
                   </button>
+                  </Link>
                 </div>
                 <hr className="mb-6 border-t" />
                 <div className="text-center">

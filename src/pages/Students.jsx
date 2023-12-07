@@ -7,7 +7,7 @@ function Students() {
       <Navbar></Navbar>
       {/* Profile page remains edit and settings 
       
-     Assignment: Create an image gallerry that displace random images when a button is clicked 
+     Assignment: Create an image gallerry that displays random images when a button is clicked 
 
       */}
     </div>
