@@ -113,7 +113,7 @@ eduSphere/
 
 ## Contributing
 
-Contributions are welcome! Please follow our [Contribution Guidelines](CONTRIBUTING.md). Loading..
+Contributions are welcome! Please follow our [Contribution Guidelines](CONTRIBUTING.md). Still Loading (you can send a message to aishatadewoyin@outlook.com to show your interest in contributing. Thank you)..
 
 ## License
 
@@ -121,4 +121,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
-- Special thanks to Blessing Udeji for her contributions to this project.
+- Special thanks to:
+-
+- Blessing Udeji
+- and Chibuike Nwafor
+- for there contributions to this project.
