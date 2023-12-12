@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from '../components/Navbar'
 
-function careers() {
+const Careers = () => {
   return (
     <div>
       <Navbar></Navbar>
@@ -9,4 +9,4 @@ function careers() {
   )
 }
 
-export default careers
+export default Careers

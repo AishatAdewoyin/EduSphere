@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import Navbar from '../components/Navbar'
 
-function about() {
+function About() {
   return (
     <div className="text-[#00df9a]">
       <Navbar></Navbar>
@@ -43,4 +43,4 @@ function about() {
   )
 }
 
-export default about
+export default About
