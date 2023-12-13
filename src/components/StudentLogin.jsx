@@ -7,7 +7,7 @@ const StudentLogin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const student_login = (e) => {
+  const studentlogin = (e) => {
     e.preventDefault();
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
@@ -25,7 +25,7 @@ const StudentLogin = () => {
       </h3>
       <form
         className="px-8 pt-6 pb-8 mb-4 bg-white rounded"
-        onSubmit={student_login}
+        onSubmit={studentlogin}
       >
         <div className="mb-4 md:flex md:justify-between"></div>
         <div className="mb-4">
@@ -63,7 +63,7 @@ const StudentLogin = () => {
         <div className="mb-6 text-center">
           <button
             className="w-full px-4 py-2 font-bold text-black bg-[#00df9a] rounded-full hover:bg-[#47ffc5] focus:outline-none focus:shadow-outline"
-            type="button"
+            type="submit"
           >
             Sign In
           </button>
