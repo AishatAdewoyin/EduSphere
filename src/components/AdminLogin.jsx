@@ -5,8 +5,8 @@ import { auth } from "../firebase";
 
 
 const AdminLogin = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [password, setPassword] = useState("");
 
   const adminLogin = (e) => {
     e.preventDefault();

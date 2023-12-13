@@ -1,21 +1,32 @@
 import { signInWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
 import Link from "next/link";
-import { auth } from "../firebase";
+import usePasswordVisibility from "../helpers/utils";
+import useAuth from "../hooks/useAuth";
+import { signInWithPopup, GoogleAuthProvider, getAuth } from "firebase/auth";
+
+import Spinner from "../components/Spinner";
+import { useRouter } from "next/navigation";
+// import { auth } from "../firebase";
 
 const StudentLogin = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const { passwordVisible, togglePasswordVisibility } = usePasswordVisibility();
+  const { password, setPassword, email, setEmail, loading, loginUser } =
+    useAuth();
+  const router = useRouter();
+  const auth = getAuth();
+  
 
-  const studentlogin = (e) => {
-    e.preventDefault();
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        console.log(userCredential);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+
+
+  const studentlogin = async (email, password) => {
+    if (email.length === 0) {
+      toast.error("Enter your Email Address");
+    } else if (password.length === 0) {
+      toast.error("Enter your Password");
+    } else {
+      loginUser(email, password);
+    }
   };
 
   return (
@@ -25,7 +36,6 @@ const StudentLogin = () => {
       </h3>
       <form
         className="px-8 pt-6 pb-8 mb-4 bg-white rounded"
-        onSubmit={studentlogin}
       >
         <div className="mb-4 md:flex md:justify-between"></div>
         <div className="mb-4">
@@ -54,19 +64,29 @@ const StudentLogin = () => {
             <input
               className="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
               id="c_password"
-              type="password"
+              type={passwordVisible ? "text" : "password"}
               placeholder="*********"
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
         </div>
         <div className="mb-6 text-center">
+        <Link href="/Profile">
           <button
             className="w-full px-4 py-2 font-bold text-black bg-[#00df9a] rounded-full hover:bg-[#47ffc5] focus:outline-none focus:shadow-outline"
             type="submit"
+            // onSubmit={studentlogin}
+            onClick={(e) => {
+              e.preventDefault();
+              studentlogin(email, password);
+            }}
+
           >
-            Sign In
+            {loading ? <Spinner /> : "Login"}
+
           </button>
+          </Link>
+
         </div>
         <hr className="mb-6 border-t" />
         <div className="text-center">
