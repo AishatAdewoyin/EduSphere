@@ -2,11 +2,7 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/Profile": "pages/Profile.js",
   "/Signup": "pages/Signup.js",
   "/Login": "pages/Login.js",
-  "/Careers": "pages/Careers.js",
-  "/About": "pages/About.js",
-  "/Contact": "pages/Contact.js",
   "/": "pages/index.js"
 }
