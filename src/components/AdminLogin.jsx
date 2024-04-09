@@ -3,10 +3,9 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { auth } from "../firebase";
 
-
 const AdminLogin = () => {
-  // const [email, setEmail] = useState("");
-  // const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const adminLogin = (e) => {
     e.preventDefault();
@@ -25,11 +24,11 @@ const AdminLogin = () => {
         Login To Your Account As an Admin!
       </h3>
       <form className="px-8 pt-6 pb-8 mb-4 bg-white rounded" onSubmit={adminLogin}>
-      <div className="mb-4 md:flex md:justify-between"></div>
+        <div className="mb-4 md:flex md:justify-between">
           <div className="mb-4">
             <label
               className="block mb-2 text-sm font-bold text-gray-700"
-              for="email"
+              htmlFor="email"
             >
               Email
             </label>
@@ -44,8 +43,8 @@ const AdminLogin = () => {
           <div className="mb-4">
             <div className="md:ml-2">
               <label
-                class="block mb-2 text-sm font-bold text-gray-700"
-                for="c_password"
+                className="block mb-2 text-sm font-bold text-gray-700"
+                htmlFor="c_password"
               >
                 Confirm Password
               </label>
@@ -54,7 +53,7 @@ const AdminLogin = () => {
                 id="c_password"
                 type="password"
                 placeholder="*********"
-              onChange={(e) => setPassword(e.target.value)}
+                onChange={(e) => setPassword(e.target.value)}
               />
             </div>
           </div>
@@ -68,16 +67,16 @@ const AdminLogin = () => {
           </div>
           <hr className="mb-6 border-t" />
           <div className="text-center">
-            <Link
-              href="#"
-              className="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
-            >
-              Forgot Password?
+            <Link href="#">
+              <span className="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800">
+                Forgot Password?
+              </span>
             </Link>
           </div>
+        </div>
       </form>
     </div>
   );
 };
 
-export default AdminLogin
+export default AdminLogin;
