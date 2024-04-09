@@ -3,46 +3,38 @@ import React, { useState } from "react";
 import Link from "next/link";
 import usePasswordVisibility from "../helpers/utils";
 import useAuth from "../hooks/useAuth";
-import { signInWithPopup, GoogleAuthProvider, getAuth } from "firebase/auth";
-
 import Spinner from "../components/Spinner";
-import { useRouter } from "next/navigation";
-// import { auth } from "../firebase";
+import { useRouter } from "next/router";
+import { getAuth } from "firebase/auth";
 
 const StudentLogin = () => {
   const { passwordVisible, togglePasswordVisibility } = usePasswordVisibility();
-  const { password, setPassword, email, setEmail, loading, loginUser } =
-    useAuth();
+  const { password, setPassword, email, setEmail, loading, loginUser } = useAuth();
   const router = useRouter();
   const auth = getAuth();
-  
-
-
 
   const studentlogin = async (email, password) => {
     if (email.length === 0) {
-      toast.error("Enter your Email Address");
+      alert("Enter your Email Address");
     } else if (password.length === 0) {
-      toast.error("Enter your Password");
+      alert("Enter your Password");
     } else {
       loginUser(email, password);
     }
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    studentlogin(email, password);
+  };
+
   return (
     <div className="w-full lg:w-5/12 font-mono bg-white p-5 rounded-lg mx-auto">
-      <h3 className="pt-4 text-2xl text-center">
-        Login As a Student!
-      </h3>
-      <form
-        className="px-8 pt-6 pb-8 mb-4 bg-white rounded"
-      >
+      <h3 className="pt-4 text-2xl text-center">Login As a Student!</h3>
+      <form className="px-8 pt-6 pb-8 mb-4 bg-white rounded" onSubmit={handleSubmit}>
         <div className="mb-4 md:flex md:justify-between"></div>
         <div className="mb-4">
-          <label
-            className="block mb-2 text-sm font-bold text-gray-700"
-            for="email"
-          >
+          <label className="block mb-2 text-sm font-bold text-gray-700" htmlFor="email">
             Email
           </label>
           <input
@@ -55,10 +47,7 @@ const StudentLogin = () => {
         </div>
         <div className="mb-4">
           <div className="md:ml-2">
-            <label
-              class="block mb-2 text-sm font-bold text-gray-700"
-              for="c_password"
-            >
+            <label className="block mb-2 text-sm font-bold text-gray-700" htmlFor="c_password">
               Confirm Password
             </label>
             <input
@@ -71,38 +60,26 @@ const StudentLogin = () => {
           </div>
         </div>
         <div className="mb-6 text-center">
-        <Link href="/Profile">
           <button
             className="w-full px-4 py-2 font-bold text-black bg-[#00df9a] rounded-full hover:bg-[#47ffc5] focus:outline-none focus:shadow-outline"
             type="submit"
-            // onSubmit={studentlogin}
-            onClick={(e) => {
-              e.preventDefault();
-              studentlogin(email, password);
-            }}
-
           >
             {loading ? <Spinner /> : "Login"}
-
           </button>
-          </Link>
-
         </div>
         <hr className="mb-6 border-t" />
         <div className="text-center">
-          <Link
-            href="#"
-            className="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
-          >
-            Forgot Password?
+          <Link href="#" passHref>
+            <span className="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800">
+              Forgot Password?
+            </span>
           </Link>
         </div>
         <div className="text-center">
-          <Link
-            href="/Signup"
-            className="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800"
-          >
-            Don't Have an Account? SignUp!
+          <Link href="/Signup" passHref>
+            <span className="inline-block text-sm text-blue-500 align-baseline hover:text-blue-800">
+              Don't Have an Account? SignUp!
+            </span>
           </Link>
         </div>
       </form>
