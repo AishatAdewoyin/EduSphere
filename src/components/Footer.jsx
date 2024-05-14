@@ -19,19 +19,19 @@ const Footer = () => {
           like our page, follow us and share our content with your loved ones!
         </p>
         <div className="flex justify-between md:w-[75%] my-6">
-          <Link href="https://www.facebook.com/aishatomoadewoyin">
+          <Link href="https://www.facebook.com/aishatadewoyin.page" target='_blank'>
             <FaFacebookSquare size={30} />
           </Link>
-          <Link href="https://www.instagram.com/aishat_adewoyin">
+          <Link href="https://www.instagram.com/aishat_adewoyin" target='_blank'>
             <FaInstagram size={30} />
           </Link>
-          <Link href="https://twitter.com/aishaadewoyin">
+          <Link href="https://twitter.com/aishaadewoyin" target='_blank'>
             <FaTwitterSquare size={30} />
           </Link>
-          <Link href="https://github.com/Aishat452">
+          <Link href="https://github.com/AishatAdewoyin" target='_blank'>
             <FaGithubSquare size={30} />
           </Link>
-          <Link href="https://www.youtube.com/c/DigitalIntellectualHub">
+          <Link href="https://www.youtube.com/@codebytesbyaishat" target='_blank'>
             <FaYoutubeSquare size={30} />
           </Link>
         </div>
