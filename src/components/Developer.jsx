@@ -3,8 +3,6 @@ import Link from "next/link";
 import Aishat from "../images/aishat_adewoyin.png";
 import Blessing from "../images/blessing_udeji.png";
 import Image from "next/image";
-// import { Link } from "react-router-dom";
-// import Link from 'next/link';
 
 const Developer = () => {
   return (

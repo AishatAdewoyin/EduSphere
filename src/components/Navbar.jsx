@@ -60,22 +60,17 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link href="/Careers" className="p-4 border-b border-gray-600">
-              Career
-            </Link>
-          </li>
-          <li>
-            <Link href="/Login" className="p-4 border-b border-gray-600">
+            <Link href="/login" className="p-4 border-b border-gray-600">
               Profile
             </Link>
           </li>
           <li>
-            <Link href="/About" className="p-4 border-b border-gray-600">
+            <Link href="/about" className="p-4 border-b border-gray-600">
               About
             </Link>
           </li>
           <li>
-            <Link href="/Contact" className="p-4">
+            <Link href="/contact" className="p-4">
               Contact
             </Link>
           </li>
