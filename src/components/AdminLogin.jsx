@@ -19,7 +19,7 @@ const AdminLogin = () => {
   };
 
   return (
-    <div className="w-full lg:w-5/12 bg-white p-5 font-mono rounded-lg mx-auto my-5">
+    <div className="w-full lg:w-5/12 bg-white p-5 font-mono rounded-lg mx-auto my-10">
       <h3 className="pt-4 text-2xl text-center">Login To Your Account As an Admin!</h3>
       <form className="px-8 pt-6 pb-8 mb-4 bg-white rounded" onSubmit={adminLogin}>
         <div className="mb-4">
