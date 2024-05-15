@@ -7,7 +7,7 @@ const Login = () => {
   return (
     <div>
       <Navbar />
-      <div className="flex item-center">
+      <div className="md:flex item-center">
         <StudentLogin />
         <AdminLogin />
       </div>

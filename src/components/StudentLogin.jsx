@@ -29,7 +29,7 @@ const StudentLogin = () => {
   };
 
   return (
-    <div className="w-full lg:w-5/12 font-mono bg-white p-5 rounded-lg mx-auto">
+    <div className="w-full lg:w-5/12 font-mono bg-white p-5 rounded-lg mx-auto my-5">
       <h3 className="pt-4 text-2xl text-center">Login As a Student!</h3>
       <form className="px-8 pt-6 pb-8 mb-4 bg-white rounded" onSubmit={handleSubmit}>
         <div className="mb-4 md:flex md:justify-between"></div>
