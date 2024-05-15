@@ -25,6 +25,11 @@ const Navbar = () => {
           </Link>
         </li>
         <li>
+          <Link href="/signup" className="p-4">
+            SignUp
+          </Link>
+        </li>
+        <li>
           <Link href="/login" className="p-4">
             Login
           </Link>
@@ -60,8 +65,13 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
+          <Link href="/signup" className="p-4">
+            SignUp
+          </Link>
+        </li>
+          <li>
             <Link href="/login" className="p-4 border-b border-gray-600">
-              Profile
+              Login
             </Link>
           </li>
           <li>
