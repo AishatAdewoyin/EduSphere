@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import Single from "../images/single.png";
 import Double from "../images/double.png";
 import Triple from "../images/triple.png";
@@ -27,9 +28,7 @@ const Cards = () => {
               environment.
             </p>
           </div>
-          <button className="bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto px-6 py-3">
-            Join Us Today
-          </button>
+          <Link href="/login" className="bg-[#00df9a] w-[200px] text-center rounded-md font-medium my-6 mx-auto px-6 py-3">Join Us Today</Link>
         </div>
         <div className="w-full shadow-xl bg-gray-100 flex flex-col p-4 md:my-0 my-8 rounded-lg hover:scale-105 duration-300">
           <Image
@@ -43,9 +42,9 @@ const Cards = () => {
             Foster collaboration and teamwork through group interactions, discussions, and project collaborations.
             </p>
           </div>
-          <button className="bg-black text-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto px-6 py-3">
+          <Link href="/login" className="bg-black text-[#00df9a] text-center w-[200px] rounded-md font-medium my-6 mx-auto px-6 py-3">
           Join Us Today
-          </button>
+          </Link>
         </div>
         <div className="w-full shadow-xl flex flex-col p-4 my-4 rounded-lg hover:scale-105 duration-300">
           <Image
@@ -59,9 +58,9 @@ const Cards = () => {
             Bridge the gap between students and administrators. Receive timely updates, announcements, and personalized communication.
             </p>
           </div>
-          <button className="bg-[#00df9a] w-[200px] rounded-md font-medium my-6 mx-auto px-6 py-3">
+          <Link  href="/login" className="bg-[#00df9a] w-[200px] text-center rounded-md font-medium my-6 mx-auto px-6 py-3">
           Join Us Today
-          </button>
+          </Link>
         </div>
       </div>
     </div>
