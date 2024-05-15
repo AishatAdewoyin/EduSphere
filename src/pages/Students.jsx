@@ -1,6 +1,8 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import Link from "next/link";
+import Image from "next/image";
+import studentImage from "../images/laptop.jpeg";
 
 function Students() {
   return (
@@ -10,7 +12,7 @@ function Students() {
    <div className="bg-white rounded-lg shadow-xl border p-8 w-3xl">
      <div className="flex justify-center items-center mb-8">
        <div className="w-1/5">
-         <img className="w-12 h-12 rounded-full border border-gray-100 shadow-sm" src="../images/aishat_adewoyin.png" alt="user image" />
+         <Image className="w-12 h-12 rounded-full border border-gray-100 shadow-sm" src={studentImage} alt="user image" />
        </div>
        <div className="w-4/5">
          <div>
@@ -25,7 +27,7 @@ function Students() {
      </div>
      <div className="flex justify-center items-center">
        <div className="w-1/5">
-         <img className="w-12 h-12 rounded-full border border-gray-100 shadow-sm" src="../images/aishat_adewoyin.png" alt="user image" />
+         <Image className="w-12 h-12 rounded-full border border-gray-100 shadow-sm" src={studentImage} alt="user image" />
        </div>
        <div className="w-4/5">
          <div>
@@ -40,7 +42,7 @@ function Students() {
      </div>
      <div className="flex justify-center items-center mb-8">
        <div className="w-1/5">
-         <img className="w-12 h-12 rounded-full border border-gray-100 shadow-sm" src="../images/aishat_adewoyin.png" alt="user image" />
+         <Image className="w-12 h-12 rounded-full border border-gray-100 shadow-sm" src={studentImage} alt="user image" />
        </div>
        <div className="w-4/5">
          <div>
@@ -55,7 +57,7 @@ function Students() {
      </div>
      <div className="flex justify-center items-center mb-8">
        <div className="w-1/5">
-         <img className="w-12 h-12 rounded-full border border-gray-100 shadow-sm" src="../images/aishat_adewoyin.png" alt="user image" />
+         <Image className="w-12 h-12 rounded-full border border-gray-100 shadow-sm" src={studentImage} alt="user image" />
        </div>
        <div className="w-4/5">
          <div>
@@ -70,7 +72,7 @@ function Students() {
      </div>
      <div className="flex justify-center items-center mb-8">
        <div className="w-1/5">
-         <img className="w-12 h-12 rounded-full border border-gray-100 shadow-sm" src="../images/aishat_adewoyin.png" alt="user image" />
+         <Image className="w-12 h-12 rounded-full border border-gray-100 shadow-sm" src={studentImage} alt="user image" />
        </div>
        <div className="w-4/5">
          <div>
@@ -85,7 +87,7 @@ function Students() {
      </div>
      <div className="flex justify-center items-center mb-8">
        <div className="w-1/5">
-         <img className="w-12 h-12 rounded-full border border-gray-100 shadow-sm" src="../images/aishat_adewoyin.png" alt="user image" />
+         <Image className="w-12 h-12 rounded-full border border-gray-100 shadow-sm" src={studentImage} alt="user image" />
        </div>
        <div className="w-4/5">
          <div>
@@ -100,7 +102,7 @@ function Students() {
      </div>
      <div className="flex justify-center items-center mb-8">
        <div className="w-1/5">
-         <img className="w-12 h-12 rounded-full border border-gray-100 shadow-sm" src="../images/aishat_adewoyin.png" alt="user image" />
+         <Image className="w-12 h-12 rounded-full border border-gray-100 shadow-sm" src={studentImage} alt="user image" />
        </div>
        <div className="w-4/5">
          <div>
