@@ -1,4 +1,5 @@
 // Import the functions you need from the SDKs you need
+//working on autorization
 import { initializeApp } from "firebase/app";
 import 'firebase/compat/auth';
 import firebase from 'firebase/compat/app';
