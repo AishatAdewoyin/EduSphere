@@ -1,22 +1,21 @@
-import { signInWithEmailAndPassword } from "firebase/auth";
+// import { signInWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
 import Link from "next/link";
 import { auth } from "./firebase/firebase";
 
 const AdminLogin = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [userCredentials, setUserCredentials] = useState({})
 
-  const adminLogin = (e) => {
-    e.preventDefault();
-    signInWithEmailAndPassword(auth, email, password)
-      .then((userCredential) => {
-        console.log(userCredential);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  };
+  // const adminLogin = (e) => {
+  //   e.preventDefault();
+  //   signInWithEmailAndPassword(auth, email, password)
+  //     .then((userCredential) => {
+  //       console.log(userCredential);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //     });
+  // };
 
   return (
     <div className="w-full lg:w-5/12 bg-white p-5 font-mono rounded-lg mx-3 my-10">
@@ -25,26 +24,28 @@ const AdminLogin = () => {
         <div className="mb-4">
           <label className="block mb-2 text-sm font-bold text-gray-700" htmlFor="email">
             Email
-          </label>
           <input
             className="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
             id="email"
             type="email"
+            name="email"
             placeholder="Email"
-            onChange={(e) => setEmail(e.target.value)}
+            onChange=
           />
+          </label>
         </div>
         <div className="mb-4">
           <label className="block mb-2 text-sm font-bold text-gray-700" htmlFor="password">
             Password
-          </label>
           <input
             className="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
             id="password"
             type="password"
+            name="password"
             placeholder="Password"
             onChange={(e) => setPassword(e.target.value)}
           />
+          </label>
         </div>
         <div className="mb-6 text-center">
           <button
