@@ -1,7 +1,7 @@
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
 import Link from "next/link";
-import { auth } from "../firebase";
+// import { auth } from "../firebase";
 import useAuth from "../hooks/useAuth";
 import Spinner from "../components/Spinner";
 import { toast } from "react-toastify";

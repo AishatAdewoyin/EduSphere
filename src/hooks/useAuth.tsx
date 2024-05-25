@@ -1,6 +1,6 @@
 import { useRouter } from "next/navigation";
-import React, { useState } from "react";
-import { auth } from "../firebase";
+import React,  { useState } from "react";
+// import { auth } from "../firebase";
 import { toast } from "react-toastify";
 
 const useAuth = () => {
