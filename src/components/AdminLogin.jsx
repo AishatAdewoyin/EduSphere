@@ -1,21 +1,21 @@
 // import { signInWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
 import Link from "next/link";
-import { auth } from "./firebase/firebase";
+import { auth } from "../Firebase/firebase";
 
 const AdminLogin = () => {
   const [userCredentials, setUserCredentials] = useState({})
 
-  // const adminLogin = (e) => {
-  //   e.preventDefault();
-  //   signInWithEmailAndPassword(auth, email, password)
-  //     .then((userCredential) => {
-  //       console.log(userCredential);
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
-  // };
+  const adminLogin = (e) => {
+    e.preventDefault();
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        console.log(userCredential);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   return (
     <div className="w-full lg:w-5/12 bg-white p-5 font-mono rounded-lg mx-3 my-10">
@@ -30,7 +30,7 @@ const AdminLogin = () => {
             type="email"
             name="email"
             placeholder="Email"
-            onChange=
+            onChange=''
           />
           </label>
         </div>

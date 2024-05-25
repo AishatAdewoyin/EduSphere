@@ -1,11 +1,11 @@
-import { useRouter } from "next/navigation";
-import React,  { useState } from "react";
-// import { auth } from "../firebase";
-import { toast } from "react-toastify";
+import { useRouter } from 'next/navigation';
+import React, { useState } from 'react';
+import { auth } from '../firebase/firebase';
+import { toast } from 'react-toastify';
 
 const useAuth = () => {
-  const [password, setPassword] = useState("");
-  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('');
   const [loading, setLoading] = useState(false);
   const router = useRouter();
 
@@ -15,10 +15,10 @@ const useAuth = () => {
       .signInWithEmailAndPassword(email, password)
       .then((res: any) => {
         console.log(res);
-        toast.success("Login Successful");
+        toast.success('Login Successful');
         setLoading(false);
         setTimeout(() => {
-          router.push("/Profile");
+          router.push('/Profile');
         }, 2000);
       })
       .catch((err: any) => {
@@ -32,9 +32,9 @@ const useAuth = () => {
     auth
       .createUserWithEmailAndPassword(email, password)
       .then((res) => {
-        toast.success("Account Created Successfully");
+        toast.success('Account Created Successfully');
         setTimeout(() => {
-          router.push("/Profile");
+          router.push('/Profile');
         }, 1000);
       })
       .catch((err) => {
@@ -48,13 +48,13 @@ const useAuth = () => {
     auth
       .signOut()
       .then(() => {
-        toast.success("User logged out");
+        toast.success('User logged out');
         setTimeout(() => {
-          router.push("/login");
+          router.push('/login');
         }, 2000);
       })
       .catch((error) => {
-        toast.error("Log-out error:", error);
+        toast.error('Log-out error:', error);
       });
   };
 
