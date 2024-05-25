@@ -1,7 +1,7 @@
 import { signInWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
 import Link from "next/link";
-import { auth } from "../firebase";
+import { auth } from "./firebase/firebase";
 
 const AdminLogin = () => {
   const [email, setEmail] = useState("");
@@ -19,8 +19,8 @@ const AdminLogin = () => {
   };
 
   return (
-    <div className="w-full lg:w-5/12 bg-white p-5 font-mono rounded-lg mx-auto my-10">
-      <h3 className="pt-4 text-2xl text-center">Login To Your Account As an Admin!</h3>
+    <div className="w-full lg:w-5/12 bg-white p-5 font-mono rounded-lg mx-3 my-10">
+      <h3 className="pt-4 text-2xl text-center">Login As an Admin!</h3>
       <form className="px-8 pt-6 pb-8 mb-4 bg-white rounded" onSubmit={adminLogin}>
         <div className="mb-4">
           <label className="block mb-2 text-sm font-bold text-gray-700" htmlFor="email">

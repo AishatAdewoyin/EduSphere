@@ -65,7 +65,7 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
-            <Link href="/signup" className="p-4">
+            <Link href="/signup" className="p-4 border-b border-gray-600">
               SignUp
             </Link>
           </li>
