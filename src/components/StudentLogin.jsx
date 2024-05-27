@@ -1,4 +1,4 @@
-import { signInWithEmailAndPassword } from "firebase/auth";
+// import { signInWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
 import Link from "next/link";
 import usePasswordVisibility from "../helpers/utils";
@@ -7,13 +7,14 @@ import Spinner from "../components/Spinner";
 import { useRouter } from "next/router";
 import { getAuth } from "firebase/auth";
 
+
 const StudentLogin = () => {
   const { passwordVisible, togglePasswordVisibility } = usePasswordVisibility();
   const { password, setPassword, email, setEmail, loading, loginUser } = useAuth();
   const router = useRouter();
-  // const auth = getAuth();
+  const auth = getAuth();
 
-  const studentlogin = async (email, password) => {
+  const loginStudent = async (email, password) => {
     if (email.length === 0) {
       alert("Enter your Email Address");
     } else if (password.length === 0) {
@@ -22,16 +23,24 @@ const StudentLogin = () => {
       loginUser(email, password);
     }
   };
+  const handlePasswordChange = (e) => {
+    setPassword(e.target.value);
+  };
+
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    studentlogin(email, password);
+    loginStudent(email, password);
   };
 
   return (
     <div className="w-full lg:w-5/12 bg-white p-5 font-mono rounded-lg mx-3 my-10">
       <h3 className="pt-4 text-2xl text-center">Login As an Student!</h3>
-      <form className="px-8 pt-6 pb-8 mb-4 bg-white rounded" onSubmit={studentlogin}>
+      <form className="px-8 pt-6 pb-8 mb-4 bg-white rounded" onSubmit={handleSubmit}>
         <div className="mb-4">
           <label className="block mb-2 text-sm font-bold text-gray-700" htmlFor="email">
             Email
@@ -41,7 +50,7 @@ const StudentLogin = () => {
             id="email"
             type="email"
             placeholder="Email"
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={handleEmailChange}
           />
         </div>
         <div className="mb-4">
@@ -53,7 +62,7 @@ const StudentLogin = () => {
             id="password"
             type="password"
             placeholder="Password"
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={handlePasswordChange}
           />
         </div>
         <div className="mb-6 text-center">

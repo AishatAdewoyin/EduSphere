@@ -1,15 +1,15 @@
-import React from "react";
-import AdminLogin from "../components/AdminLogin";
-import StudentLogin from "../components/StudentLogin";
-import Navbar from "../components/Navbar";
+import React from 'react';
+import AdminLogin from '../components/AdminLogin';
+import StudentLogin from '../components/StudentLogin';
+import Navbar from '../components/Navbar';
 
 const Login = () => {
   return (
     <div>
       <Navbar />
-      <div className="md:flex item-center">
+      <div className='md:flex item-center'>
         <StudentLogin />
-        <AdminLogin />
+        {/* <AdminLogin /> */}
       </div>
     </div>
   );

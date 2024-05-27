@@ -15,7 +15,8 @@ const useAuth = () => {
       .signInWithEmailAndPassword(email, password)
       .then((res: any) => {
         console.log(res);
-        toast.success('Login Successful');
+        console.log('login successful')
+        // toast.success('Login Successful');
         setLoading(false);
         setTimeout(() => {
           router.push('/Profile');
@@ -24,7 +25,8 @@ const useAuth = () => {
       .catch((err: any) => {
         console.log(err.message);
         setLoading(false);
-        toast.error(err.message);
+        alert(err.message)
+        // toast.error(err.message);
       });
   };
   const registerUser = (email: string, password: string) => {
@@ -32,7 +34,8 @@ const useAuth = () => {
     auth
       .createUserWithEmailAndPassword(email, password)
       .then((res) => {
-        toast.success('Account Created Successfully');
+        // toast.success('Account Created Successfully');
+        console.log('Account created successfully!!')
         setTimeout(() => {
           router.push('/Profile');
         }, 1000);
