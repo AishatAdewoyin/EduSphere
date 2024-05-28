@@ -16,7 +16,7 @@ const useAuth = () => {
       .then((res: any) => {
         console.log(res);
         console.log('login successful')
-        // toast.success('Login Successful');
+        toast.success('Login Successful');
         setLoading(false);
         setTimeout(() => {
           router.push('/Profile');
@@ -26,7 +26,7 @@ const useAuth = () => {
         console.log(err.message);
         setLoading(false);
         alert(err.message)
-        // toast.error(err.message);
+        toast.error(err.message);
       });
   };
   const registerUser = (email: string, password: string) => {

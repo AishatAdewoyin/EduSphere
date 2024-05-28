@@ -1,7 +1,7 @@
 import React from 'react';
 import { AppProps } from "next/app";
 import { ToastContainer } from "react-toastify";
-// import "react-toastify/dist/ReactToastify.css"; // Import toast styles
+import "react-toastify/dist/ReactToastify.css"; // Import toast styles
 import "../styles/global.css"
 
 
