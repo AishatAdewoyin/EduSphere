@@ -37,6 +37,7 @@ const Signup = () => {
   };
 
   // const [password, setPassword] = useState('');
+  // For the show password feature
   const [showPassword, setShowPassword] = useState(false);
 
   return (
@@ -134,7 +135,7 @@ const Signup = () => {
               ></path>
             </svg>
               <button className="">
-                Sign in with Google
+                Sign Up with Google
               </button>
             </Link>
           </div>
