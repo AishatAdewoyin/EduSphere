@@ -6,6 +6,8 @@ import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
 import { db, auth } from '../firebase/firebase';
 import Spinner from '../components/Spinner';
 import { toast } from 'react-toastify';
+import Router from 'next/router';
+
 
 const editprofile = () => {
   const [name, setName] = useState('');
@@ -13,8 +15,9 @@ const editprofile = () => {
   const [job, setJob] = useState('');
   const [company, setCompany] = useState('');
   const [bio, setBio] = useState('');
-
   const [isSaving, setIsSaving] = useState(false);
+  const router = Router;
+
 
   const handleSave = async (e) => {
     e.preventDefault();
@@ -37,7 +40,7 @@ const editprofile = () => {
 
       // Handle success
       toast.success('Profile saved successfully!');
-      router.push('/profile');
+      router.push('/Profile');
     } catch (error) {
       // Handle error
       toast.error('Error saving profile:', error);
@@ -151,7 +154,7 @@ const editprofile = () => {
             <Link href=''>
               <button
                 className='w-full px-4 py-2 font-bold text-black bg-[#00df9a] rounded-full hover:bg-[#47ffc5] focus:outline-none focus:shadow-outline'
-                type='submit'
+                // type='submit'
                 onClick={handleSave}
               >
                 {isSaving ? <Spinner /> : 'Update'}
