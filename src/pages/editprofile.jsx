@@ -3,11 +3,10 @@ import React, { useState } from 'react';
 
 import NavbarMini from '../components/NavbarMini';
 import { collection, addDoc, serverTimestamp } from 'firebase/firestore';
-import { db, auth } from '../firebase/firebase';
+import { db, auth } from '../helpers/firebase';
 import Spinner from '../components/Spinner';
 import { toast } from 'react-toastify';
 import Router from 'next/router';
-
 
 const editprofile = () => {
   const [name, setName] = useState('');
@@ -17,7 +16,6 @@ const editprofile = () => {
   const [bio, setBio] = useState('');
   const [isSaving, setIsSaving] = useState(false);
   const router = Router;
-
 
   const handleSave = async (e) => {
     e.preventDefault();

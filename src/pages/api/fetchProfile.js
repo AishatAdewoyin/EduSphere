@@ -1,14 +1,21 @@
 // pages/api/profile.js
-import { auth, db } from '@/helpers/firebase';
-import { collection, query, where, orderBy, limit, getDocs } from 'firebase/firestore';
-import { getAuth } from 'firebase-admin/auth';
-import initFirebaseAdmin from '../helpers/initFirebaseAdmin'; // Ensure to initialize Firebase Admin SDK
+import { auth, db } from '../../helpers/firebase';
+import {
+  collection,
+  query,
+  where,
+  orderBy,
+  limit,
+  getDocs,
+} from 'firebase/firestore';
+// import { getAuth } from 'firebase-admin/auth';
+import initFirebaseAdmin from '../../helpers/initFirebaseAdmin'; // Ensure to initialize Firebase Admin SDK
 
 initFirebaseAdmin();
 
 export default async function handler(req, res) {
   try {
-    const { userId } = req.query;
+    const { userId } = auth.currentUser?.uid;
 
     if (!userId) {
       return res.status(400).json({ error: 'User ID is required' });

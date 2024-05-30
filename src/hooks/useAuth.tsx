@@ -1,6 +1,6 @@
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
-import { auth } from '../firebase/firebase';
+import { auth } from '../helpers/firebase';
 import { toast } from 'react-toastify';
 
 const useAuth = () => {
@@ -15,7 +15,7 @@ const useAuth = () => {
       .signInWithEmailAndPassword(email, password)
       .then((res: any) => {
         console.log(res);
-        console.log('login successful')
+        console.log('login successful');
         toast.success('Login Successful');
         setLoading(false);
         setTimeout(() => {
@@ -25,7 +25,7 @@ const useAuth = () => {
       .catch((err: any) => {
         console.log(err.message);
         setLoading(false);
-        alert(err.message)
+        alert(err.message);
         toast.error(err.message);
       });
   };
@@ -35,7 +35,7 @@ const useAuth = () => {
       .createUserWithEmailAndPassword(email, password)
       .then((res) => {
         // toast.success('Account Created Successfully');
-        console.log('Account created successfully!!')
+        console.log('Account created successfully!!');
         setTimeout(() => {
           router.push('/Profile');
         }, 1000);
