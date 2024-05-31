@@ -26,11 +26,9 @@ const Developer = () => {
             <p className="text-center">BackEnd Engineer</p>
            </div>
             <p className="text-gray-400">
-              A passionate software developer with an unwavering commitment to
-              crafting visually stunning, user-friendly and fully functional
-              websites. Dedicated to blending cutting-edge technology with a keen eye for
-              design, Blessing continues to bring creativity and precision to
-              every project.
+
+	  Hi! Aisha is a passionate and driven software engineer with
+	  a focus on backend software development and mobile app development. I have a strong foundation in languages such as C, Python, JavaScript, Swift, React Native, and PHP.
             </p>
             <Link
               href="https://www.linkedin.com/in/aishatadewoyin/"
@@ -57,8 +55,9 @@ const Developer = () => {
             <p className="text-center">FrontEnd Engineer</p>
             </div>
             <p className="text-gray-400">
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eum velit, voluptas maxime qui atque, cupiditate necessitatibus ad libero itaque, quia praesentium sunt placeat id ipsam sed et dolorum quasi deserunt suscipit assumenda doloribus possimus laboriosam nemo corrupti. Corporis tenetur soluta laborum cum error quasi aspernatur eius suscipit tempore! Eligendi, soluta accusamus. 
-            </p>
+
+       A passionate software developer with an unwavering commitment to crafting visually stunning, user-friendly and fully functional websites. Dedicated to blending cutting-edge technology with a keen eye for design, Blessing continues to bring creativity and precision to every project.
+ </p>
             <Link
               href="https://www.linkedin.com/in/blessing-udeji/"
               target="_blank"
