@@ -4,7 +4,8 @@ import Chat from '../components/Chat';
 const Message = () => {
   return (
     <>
-      <Chat room={room} />
+    {room ? 
+     (<Chat room={room} />): }
     </>
   );
 };
