@@ -2,16 +2,16 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import usePasswordVisibility from "../helpers/utils";
-import { AiOutlineEye, AiOutlineEyeInvisible } from 'react-icons/ai';
+import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import useAuth from "../hooks/useAuth";
 import Spinner from "../components/Spinner";
 import { useRouter } from "next/router";
 import { getAuth } from "firebase/auth";
 
-
 const StudentLogin = () => {
   const { passwordVisible, togglePasswordVisibility } = usePasswordVisibility();
-  const { password, setPassword, email, setEmail, loading, loginUser } = useAuth();
+  const { password, setPassword, email, setEmail, loading, loginUser } =
+    useAuth();
   const router = useRouter();
   const auth = getAuth();
 
@@ -32,7 +32,6 @@ const StudentLogin = () => {
     setEmail(e.target.value);
   };
 
-
   const handleSubmit = (e) => {
     e.preventDefault();
     loginStudent(email, password);
@@ -43,10 +42,16 @@ const StudentLogin = () => {
 
   return (
     <div className="px-5">
-      <form className="px-8 pt-6 pb-8 mb-4 w-full lg:w-5/12 bg-white p-5 font-mono rounded-lg mx-auto my-10" onSubmit={handleSubmit}>
-      <h3 className="pt-4 text-2xl text-center">Login</h3>
+      <form
+        className="px-8 pt-6 pb-8 mb-4 w-full lg:w-5/12 bg-white p-5 font-mono rounded-lg mx-auto my-10"
+        onSubmit={handleSubmit}
+      >
+        <h3 className="pt-4 text-2xl text-center">Login</h3>
         <div className="mb-4">
-          <label className="block mb-2 text-sm font-bold text-gray-700" htmlFor="email">
+          <label
+            className="block mb-2 text-sm font-bold text-gray-700"
+            htmlFor="email"
+          >
             Email
           </label>
           <input
@@ -58,31 +63,33 @@ const StudentLogin = () => {
           />
         </div>
         <div className="mb-4 md:mr-2 md:mb-0">
-        <label
-          className="block mb-2 text-sm font-bold text-gray-700"
-          htmlFor="password"
-        >
-          Password
-        </label>
-        <div className="relative">
-          <input
-            className="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
-            id="password"
-            type={showPassword ? 'text' : 'password'}
-            placeholder="*********"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <button
-            type="button"
-            className="absolute top-1/3 right-3 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 focus:outline-none"
-            onClick={() => setShowPassword(!showPassword)}
+          <label
+            className="block mb-2 text-sm font-bold text-gray-700"
+            htmlFor="password"
           >
-            {showPassword ? <AiOutlineEyeInvisible/> : <AiOutlineEye />}
-          </button>
+            Password
+          </label>
+          <div className="relative">
+            <input
+              className="w-full px-3 py-2 mb-3 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline"
+              id="password"
+              type={showPassword ? "text" : "password"}
+              placeholder="*********"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+            <button
+              type="button"
+              className="absolute top-1/3 right-3 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 focus:outline-none"
+              onClick={() => setShowPassword(!showPassword)}
+            >
+              {showPassword ? <AiOutlineEyeInvisible /> : <AiOutlineEye />}
+            </button>
+          </div>
+          <p className="text-xs italic text-red-500">
+            Please choose a password.
+          </p>
         </div>
-        <p className="text-xs italic text-red-500">Please choose a password.</p>
-      </div>
 
         <div className="my-6 text-center">
           <button
@@ -92,10 +99,12 @@ const StudentLogin = () => {
             Sign In
           </button>
         </div>
-          <p className="text-center">Or</p>
-          <div>
-            
-            <Link href={"/"} className="text-center flex justify-center items-center gap-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        <p className="text-center">Or</p>
+        <div>
+          <Link
+            href={"/"}
+            className="text-center flex justify-center items-center gap-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               x="0px"
@@ -121,11 +130,9 @@ const StudentLogin = () => {
                 d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"
               ></path>
             </svg>
-              <button className="">
-                Sign In with Google
-              </button>
-            </Link>
-          </div>
+            <button className="">Sign In with Google</button>
+          </Link>
+        </div>
         <hr className="mb-6 border-t" />
         <div className="text-center">
           <Link href="#">
