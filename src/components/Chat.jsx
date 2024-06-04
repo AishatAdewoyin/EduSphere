@@ -66,7 +66,7 @@ const Chat = ({ room }) => {
             </div>
           </div>
         </div>
-        <div className='flex items-center p-4'>
+        <form className='flex items-center p-4'>
           <input
             type='text'
             placeholder='Type your message...'
@@ -75,7 +75,7 @@ const Chat = ({ room }) => {
           <button className='ml-2 rounded-lg bg-green-400 px-4 py-2 text-white'>
             Send
           </button>
-        </div>
+        </form>
       </div>
     </>
   );
