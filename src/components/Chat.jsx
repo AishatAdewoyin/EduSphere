@@ -26,6 +26,7 @@ const Chat = ({ room }) => {
       snapshot.forEach((doc) => {
         messages.push({ ...doc.data(), id: doc.id });
       });
+      console.log('New message')
       console.log(messages);
       setMessages(messages);
     });
@@ -60,9 +61,10 @@ const Chat = ({ room }) => {
           <div className='flex flex-col space-y-2 p-4'>
             {messages.map((message) => (
               <div
-                key={message.id}
+                key={message.userId}
                 className={`flex items-center py-2 px-3 rounded-xl ${
-                  message.user === auth.currentUser.displayName || auth.currentUser.email
+                  message.user === auth.currentUser.displayName ||
+                  message.user === auth.currentUser.email
                     ? 'self-end bg-green-400 text-white rounded-tr'
                     : 'self-start bg-gray-200'
                 }`}
