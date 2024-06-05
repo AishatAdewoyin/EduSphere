@@ -27,7 +27,7 @@ const Developer = () => {
            </div>
             <p className="text-gray-400">
 
-	  Hi! Aisha is a passionate and driven software engineer with
+	  Aisha is a passionate and driven software engineer with
 	  a focus on backend software development and mobile app development. I have a strong foundation in languages such as C, Python, JavaScript, Swift, React Native, and PHP.
             </p>
             <Link
