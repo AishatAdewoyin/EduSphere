@@ -40,7 +40,8 @@ const Chat = ({ room }) => {
     await addDoc(messagesRef, {
       text: newMessage,
       createdAt: serverTimestamp(),
-      user: auth.currentUser.displayName,
+      user: auth.currentUser.displayName || auth.currentUser.email,
+      userId: auth?.currentUser.uid,
       room,
     });
 
@@ -52,7 +53,7 @@ const Chat = ({ room }) => {
       <div className='flex h-screen flex-col bg-purple-700'>
         <div className=''>
           <h1 className='text-center text-2xl font-bold bg-white text-red-400'>
-            Chat - EduSphere
+            {room} Chat - EduSphere
           </h1>
         </div>
         <div className='flex-grow overflow-y-auto'>
@@ -61,7 +62,7 @@ const Chat = ({ room }) => {
               <div
                 key={message.id}
                 className={`flex items-center py-2 px-3 rounded-xl ${
-                  message.user === auth.currentUser.displayName
+                  message.user === auth.currentUser.displayName || auth.currentUser.email
                     ? 'self-end bg-green-400 text-white rounded-tr'
                     : 'self-start bg-gray-200'
                 }`}
