@@ -16,6 +16,7 @@ const Createchatroom = () => {
             type="text"
             name='room_name'
             placeholder="Write a room name"
+            
           />
         </div>
         <div className="my-6 text-center">
