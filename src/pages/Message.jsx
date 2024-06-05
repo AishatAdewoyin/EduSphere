@@ -4,6 +4,7 @@ import Chat from '../components/Chat';
 const Message = () => {
   const [room, setRoom] = useState('');
   const roomRef = useRef(null);
+  const [isInChat, setIsInChat] = useState(null);
 
   return (
     <>
@@ -33,6 +34,9 @@ const Message = () => {
               <button
                 className='w-full px-4 py-2 font-bold text-black bg-[#00df9a] rounded-full hover:bg-[#47ffc5] focus:outline-none focus:shadow-outline'
                 type='submit'
+                onClick={() => {
+                  setIsInChat(true);
+                }}
               >
                 Create a Room
               </button>
