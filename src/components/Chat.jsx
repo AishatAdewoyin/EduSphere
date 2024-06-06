@@ -69,7 +69,7 @@ const Chat = ({ room }) => {
                     : 'self-start bg-gray-200'
                 }`}
               >
-                <p>{message.text}</p>
+                <p>{message.text}</p> <p className='text-xs'>{message.user}</p>
               </div>
             ))}
           </div>
