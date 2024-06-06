@@ -25,7 +25,7 @@ const NavbarMini = () => {
           </Link>
         </li>
         <li>
-          <Link href="/Connect" className="p-4">
+          <Link href="/listofrooms" className="p-4">
             Connect With Others
           </Link>
         </li>
@@ -63,7 +63,7 @@ const NavbarMini = () => {
       </Link>
     </li>
     <li>
-      <Link href="/Connect" className="p-4">
+      <Link href="/listofrooms" className="p-4">
         Connect With Others
       </Link>
     </li>
