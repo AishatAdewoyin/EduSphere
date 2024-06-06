@@ -68,7 +68,7 @@ const NavbarMini = () => {
       </Link>
     </li>
     <li>
-      <Link href="/message" className="p-4">
+      <Link href="/Message" className="p-4">
         Create a Chat Room
       </Link>
     </li>
