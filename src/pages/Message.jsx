@@ -37,7 +37,7 @@ const Message = () => {
                 type='submit'
                 onClick={() => setRoom(roomRef.current.value)}
               >
-                Create a Room
+                Create/Join a Chat Room
               </button>
             </div>
           </form>
