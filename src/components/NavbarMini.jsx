@@ -21,7 +21,7 @@ const NavbarMini = () => {
       <ul className="hidden md:flex space-x-4">
         <li>
           <Link href="/" className="p-4">
-            Home
+            Signout
           </Link>
         </li>
         <li>
@@ -59,7 +59,7 @@ const NavbarMini = () => {
   <ul className="space-y-4">
     <li>
       <Link href="/" className="p-4 border-b border-gray-600">
-        Home
+        Signout
       </Link>
     </li>
     <li>
