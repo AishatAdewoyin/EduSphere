@@ -1,4 +1,4 @@
-# eduSphere
+# EduSphere
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
@@ -30,10 +30,11 @@ eduSphere is a social media platform designed for students and administrators of
 ## Getting Started
 
 ### Prerequisites
-
-- [Node.js](https://nodejs.org/) installed
+- [ReactJS](https://react.dev/)
+- [NextJS]()
+- [NodeJS](https://nodejs.org/) installed
 - [npm](https://www.npmjs.com/) (Node Package Manager) installed
-- [postgreSQL](https://www.postgresql.org/) set up and running
+- [Firebase](https://console.firebase.google.com/) set up and running
 
 ### Installation
 
@@ -99,16 +100,14 @@ eduSphere/
 |   |-- public/
 |   |-- src/
 |       |-- components/
-|       |-- static/
+|       |-- helpers/
 |       |-- templates/
-|-- config/
-|-- migrations/
+|       |-- pages/
 |-- .gitignore
 |-- LICENSE
 |-- README.md
 |-- package.json
-|-- requirements.txt
-|-- server.js
+|-- tailwind.config.js
 ```
 
 ## Contributing
@@ -122,7 +121,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Acknowledgments
 
 - Special thanks to:
--
-- Blessing Udeji
-- and Chibuike Nwafor
+- [Chibuike Nwafor](https://github.com/ConquerorCletus)
+- [Blessing Udeji](https://github.com/blessingudeji)
 - for there contributions to this project.
