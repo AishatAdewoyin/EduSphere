@@ -4,7 +4,7 @@ import Link from "next/link";
 import { auth } from "../Firebase/firebase";
 
 const AdminLogin = () => {
-  const [userCredentials, setUserCredentials] = useState({})
+  // const [userCredentials, setUserCredentials] = useState({})
 
   const adminLogin = (e) => {
     e.preventDefault();
