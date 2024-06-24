@@ -8,7 +8,7 @@ import Spinner from '../components/Spinner';
 import { toast } from 'react-toastify';
 import Router from 'next/router';
 
-const editprofile = () => {
+const EditProfile = () => {
   const [name, setName] = useState('');
   const [location, setLocation] = useState('');
   const [job, setJob] = useState('');
@@ -166,4 +166,4 @@ const editprofile = () => {
   );
 };
 
-export default editprofile;
+export default EditProfile;
