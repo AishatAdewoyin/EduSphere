@@ -73,7 +73,7 @@ const NavbarMini = () => {
       </Link>
     </li>
     <li>
-      <Link href="/editprofile" className="p-4">
+      <Link href="/EditProfile" className="p-4">
         Edit Profile
       </Link>
     </li>
